@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Яхт клуб</title>
+  </head>
+  <!--
+    Класс на body можно не добавлять, но это довольно распространённый приём.
+  -->
+  <body class="page">
+    <header class="page-header">
+      <nav class="main-nav">
+        <!--
+          Здесь несколько вариантов разметки:
+          1. Обернуть изображение в параграф.
+          2. Обернуть изображение в ссылку, которая ведёт сам на себя. Это уже привычный интерфейсный паттерн для перезагрузки страницы.
+          3. Не оборачивать картинку ни в какой контейнер. Класс добавить на саму картинку.
+
+          Мы выбрали 1 вариант, чтобы показать, что этот способ разметки тоже рабочий.
+        -->
+        <p class="logo">
+          <img src="img/placeholder.svg" alt="Логотип яхт-клуба Yacht Club">
+        </p>
+        <ul class="site-navigation">
+          <li class="site-navigation-item">
+            <a href="#">Наш клуб</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="#">Регаты</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="#">Команда</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="#">Обучение</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="#">Новости</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <!--
+          По макету трудно сказать, что это за элемент, но можно предположить, что это аватарка пользователя. Пока пользователь не залогинен, она может вести на страницу входа. То есть здесь нужна ссылка.
+
+          Почему внутри ссылки тег img, ведь перед нами иконка? Когда пользователь залогинен, то эта заглушка заменяется аватаркой, то есть фотографией самого пользователя. А это уже содержательное изображение. Поэтому и заглушку аватарки мы тоже разметили тегом img, чтобы сделать код единообразным для состояния "не залогинен" и "залогинен".
+        -->
+        <a class="signin" href="#">
+          <img src="img/placeholder.svg" alt="Кабинет пользователя">
+        </a>
+      </nav>
+    </header>
+    <main class="main-content">
+      <!--
+        hero – общепринятое название класс для больших графических блоков в начале страницы, которые привлекают к себе внимание.
+      -->
+      <section class="hero">
+        <h1>Вместе под парусом</h1>
+        <!--
+          Мы предположили, что это фотография реального судна этого клуба, поэтому разметили тегом img. Но вариант, когда это просто декоративный фон, тоже рабочий.
+        -->
+        <img src="img/placeholder.svg" alt="Парусное судно на закате">
+      </section>
+      <!--
+        Этот элемент — анос мероприятия или статьи, который можно вынести в другое место сайта и анонс всё равно не потеряет смысл. Поэтому тег article полностью подходит. Можно ли было использовать section? Да. Граница между article и section достаточно зыбкая.
+      -->
+      <article class="blog-article">
+        <!--
+          Можно ли было не добавлять теги time? Да, можно. Но этот блок — анонс мероприятия/статьи. А для таких элементов даты достаточно важны. Поэтому лучше выделить даты тегом time, это облегчить обработку информации для поисковиков и сервисов-агрегаторов.
+        -->
+        <p><time datetime="2021-10-20">20 октября</time> - <time datetime="2021-04-19">19 апреля</time></p>
+        <!--
+          Нужна ли ссылка внутри заголовка?
+
+          Всё зависит от того, считаете ли вы содержание этого блока полностью законченном. Если здесь есть вся информация, то ссылки не надо. Если понятно, что в описании есть только часть информации, а подробности будут на отдельной странице, то ссылка нужна.
+
+          Обычно, такие тонкости становятся понятны после общения с заказчиком. А пока размечайте на своё усмотрение, ведь добавить или убрать ссылку из разметки потом будет несложно.
+        -->
+        <h2>Стань частью команды</h2>
+        <p>Если вы давно хотели попробовать себя в яхтинге – сейчас самое лучшее время! Мы набираем команду будущих шкиперов. За 6 вы станете настоящим капитаном и уже в следующем сезоне сможете самостоятельно выйти в море!</p>
+        <!--
+          На макете обе картинки в анонсах выглядят как декоративные, но это только потому, что у дизайнера не было всей информации.
+
+          Обычно, картинки в мероприятиях/новостях несут важную информацию. И лучше сразу размечать их тегом img.
+        -->
+        <img class="blog-article-img" src="img/placeholder.svg" alt="Мужчина на яхте смотрит в бинокль">
+      </article>
+      <article class="blog-article">
+        <p><time datetime="2021-07-16">16 июля</time> - <time datetime="2021-07-23">23 июля</time></p>
+        <h2>Рожденные в воде</h2>
+        <p>Подарите детям настоящее приключение! День с морскими пиратами на корабле – это лучшая команда, веселые аниматоры, игры, соревнования, работа в команде и, конечно, море!</p>
+        <img class="blog-article-img" src="img/placeholder.svg" alt="Дети и взрослые на яхте">
+      </article>
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <ul class="contact-items">
+          <li class="contact-item">
+            <!--
+              Вместо заголовка можно было бы использовать другой тег для выделения текста: параграф с классом, спан с классом, тег b.
+
+              А вот тег strong подходит намного хуже. Так как здесь речь не про важность, а про указание типа информации ("Вот это телефон, а вот это электронная почта").
+            -->
+            <h3>Адрес:</h3>
+            <address>г. Сочи, ул. Бзугу, 9</address>
+          </li>
+          <li class="contact-item">
+            <h3>Телефон:</h3>
+            <a href="tel:+7622620563">8 (622) 62-05-63</a>
+          </li>
+          <li class="contact-item">
+            <h3>E-mail:</h3>
+            <a href="mailto:yachtclub-sochi@mail.ru">yachtclub-sochi@mail.ru</a>
+          </li>
+          <li class="contact-item">
+            <h3>Мы в социальных сетях:</h3>
+            <!--
+              Внутри перечня контактных данных есть перечень соцсетей, так что размечаем его вложенным списком
+            -->
+            <ul class="social-list">
+              <li class="social-item">
+                <a href="#">
+                  <img src="img/placeholder.svg" alt="Facebook">
+                </a>
+              </li>
+              <li class="social-item">
+                <a href="#">
+                  <img src="img/placeholder.svg" alt="Twitter">
+                </a>
+              </li>
+              <li class="social-item">
+                <a href="#">
+                  <img src="img/placeholder.svg" alt="Instagram">
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!--
+          Схемы проезда или схемы с адресами важны для клиента, поэтому их лучше всегда размечать изображениями.
+        -->
+        <img class="contacts-img" src="img/placeholder.svg" alt="Карта с адресом яхт клуба">
+      </section>
+    </main>
+    <footer class="main-footer">
+      <p class="logo">
+        <img src="img/placeholder.svg" alt="Логотип яхт клуба">
+      </p>
+      <!--
+        На макете никак не выделена ссылка, но обычно текст "Политика конфиденциальности" ведёт на отдельную страницу с описанием этой политики. Так что добавляем ссылку в разметку.
+      -->
+      <p class="policy"><a href="#">Политика конфиденциальности</a></p>
+      <p class="copyright">Яхтклуб ©2018 Все права защищены</p>
+      <!--
+         Мы посчитали, что разметка навигационных ссылок в подвале с помощью вложенных списков, выглядит наиболее логично.
+
+         В списке верхнего уровня перечисляются категории ссылок, а во вложенных списках сами ссылки.
+      -->
+      <ul class="footer-navigation-topics">
+        <li class="footer-navigation-topic">
+          <!--
+            Для разметки названия категории лучше всего подходит заголовочный тег. В иерархии заголовков он следует после h1, то есть его уровень — второй.
+          -->
+          <h2>Компания</h2>
+          <ul class="footer-navigation">
+            <li class="footer-navigation-item">
+              <a href="#">О нас</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Команда</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Новости</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Блог</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Галерея</a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-navigation-topic">
+          <h2>Яхт-клуб</h2>
+          <ul class="footer-navigation">
+            <li class="footer-navigation-item">
+              <a href="#">Правила</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Стоимость</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Анкета</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">FAQ</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Партнеры</a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-navigation-topic">
+          <h2>Услуги</h2>
+          <ul class="footer-navigation">
+            <li class="footer-navigation-item">
+              <a href="#">Аренда яхты</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Свадьба на яхте</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">День рождения</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Бизнес-встречи</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Прогулки</a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-navigation-topic">
+          <h2>Регаты</h2>
+          <ul class="footer-navigation">
+            <li class="footer-navigation-item">
+              <a href="#">Корпоративные регаты</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Календарь мероприятий</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Стать участником</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Результаты регат</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a href="#">Обучение</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
