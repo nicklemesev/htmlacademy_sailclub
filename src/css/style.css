@@ -1,0 +1,90 @@
+body {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #163152;
+  background-color: #FDFDFF;
+}
+
+.site-navigation-item a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero h1 {
+  font-style: italic;
+  font-size: 44px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+.blog-article time {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.blog-article h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #00C6BD;
+          text-decoration-color: #00C6BD;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 22px;
+}
+
+/* .blog-article-time
+ * margin-top: 4px */
+/* .blog-article-text
+ * margin-top: 0px
+ * margin-bottom: 12px */
+.contacts h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #00C6BD;
+          text-decoration-color: #00C6BD;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 22px;
+}
+
+.contact-items {
+  margin-bottom: 10px;
+}
+
+.contact-item h3 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  line-height: 21px;
+}
+.contact-item address {
+  font-size: 16px;
+  line-height: 22px;
+  font-style: normal;
+  line-height: 21px;
+}
+.contact-item a {
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  line-height: 21px;
+}
+
+.footer-navigation-topic h2 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.footer-navigation-topic a {
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

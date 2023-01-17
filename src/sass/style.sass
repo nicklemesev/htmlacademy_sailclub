@@ -1,0 +1,83 @@
+=fs14_lh18_uppercase
+    font-size: 14px
+    line-height: 18px
+    text-transform: uppercase
+
+=fs16_lh22
+    font-size: 16px
+    line-height: 22px
+
+=fs24_lh34
+    font-size: 24px
+    line-height: 34px
+
+=underline
+    text-decoration: underline
+    text-decoration-color: #00C6BD
+    text-decoration-thickness: 2px
+    text-underline-offset: 22px
+
+body
+    font-family: "Roboto", serif
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+    color: #163152
+    background-color: #FDFDFF
+
+.site-navigation-item a
+    +fs14_lh18_uppercase
+    text-decoration: none
+
+.hero h1
+    font-style: italic
+    font-size: 44px
+    line-height: 60px
+    text-transform: uppercase
+
+.blog-article
+    time
+        +fs14_lh18_uppercase
+    h2
+        font-weight: 700
+        +fs24_lh34
+        +underline
+
+/* .blog-article-time
+ margin-top: 4px */
+
+/* .blog-article-text
+ margin-top: 0px
+ margin-bottom: 12px */
+
+.contacts h2
+    font-weight: 700
+    +fs24_lh34
+    +underline
+
+.contact-items
+    margin-bottom: 10px
+
+.contact-item
+    h3
+        +fs16_lh22
+        font-weight: 700
+        line-height: 21px
+    address
+        +fs16_lh22
+        font-style: normal
+        line-height: 21px
+    a
+        +fs16_lh22
+        text-decoration: none
+        line-height: 21px
+
+.footer-navigation-topic
+    h2
+        font-weight: 700
+        +fs14_lh18_uppercase
+    a
+        font-size: 14px
+        line-height: 16px
+        text-decoration: none
